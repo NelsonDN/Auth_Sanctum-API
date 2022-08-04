@@ -16,7 +16,7 @@ class AuthController extends Controller
     {
         if (auth('sanctum')->check()){
             
-            return auth('sanctum')->user()->name;
+            return "Bienvenue " .auth('sanctum')->user()->name;
         }else {
             return response([
                 'message' => "Bienvenue .... Vous n'êtes pas authentifié"
